@@ -521,8 +521,8 @@
 		 */
 		function update() {
 			// FF and IE use the documentElement instead of body
-			var currentTop = !_this.bindElement.scrollTop ? document.documentElement.scrollTop : _this.bindElement.scrollTop;
-			var currentLeft = !_this.bindElement.scrollLeft ? document.documentElement.scrollLeft : _this.bindElement.scrollLeft;
+			var currentTop = !_this.bindElement.scrollTop ? window.scrollY : _this.bindElement.scrollTop;
+			var currentLeft = !_this.bindElement.scrollLeft ? window.scrollX : _this.bindElement.scrollLeft;
 
 			// if the user scrolled
 			if (previousScroll.left != currentLeft || previousScroll.top != currentTop) {
